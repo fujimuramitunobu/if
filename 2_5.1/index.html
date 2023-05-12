@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>if文</title>
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  <script>
+ 
+ function changeColor() {
+  var inputBox = document.getElementById("text1"); // テキストボックスを取得する
+  var num = parseInt(inputBox.value); // テキストボックスの値を数値に変換する
+
+  var colorBox = document.getElementById("box"); // 色を変える要素を取得する
+
+  if (num === 1) {
+    colorBox.style.backgroundColor = "red"; // numが1の場合に赤色に変更する
+  } else if (num === 2) {
+    colorBox.style.backgroundColor = "green"; // numが2の場合に緑色に変更する
+  } else {
+    colorBox.style.backgroundColor = "blue"; // numが1でも2でもない場合に青色に変更する
+  }
+}
+  </script>
+</head>
+<body>
+  <input type="text" id="text1">
+  <input type="button" id="button" value="ボタン" onclick="changeColor()">
+  <div id="box">
+  </div><!-- button -->
+</body>
+</html>
